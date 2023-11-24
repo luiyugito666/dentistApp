@@ -70,7 +70,7 @@ public class Shift implements Serializable {
     }
 
     public String getCondition() {
-        return Condition;
+         return Condition;
     }
 
     public void setCondition(String Condition) {
