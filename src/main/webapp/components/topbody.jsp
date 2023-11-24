@@ -83,11 +83,12 @@
                 <div id="collapseUser" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Acciones:</h6>
-                        <a class="collapse-item" href="">Ver Usuario </a>
+                        <a class="collapse-item" href="SvUsers">Ver Usuario </a>
                         <a class="collapse-item" href="createUser.jsp">Crear Usuario</a>
                     </div>
                 </div>
             </li>
+          
 
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -158,9 +159,6 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Odontologia</h1>
-                       
-                    </div>
+                  
 
              

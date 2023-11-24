@@ -4,6 +4,7 @@
  */
 package persistence;
 
+import java.util.List;
 import logica.User;
 
 /**
@@ -22,6 +23,10 @@ public class ControladoraPersistence {
 
     public void createUser(User user) {
         userJpa.create(user);
+    }
+
+    public List<User> getAllUsers() {
+        return userJpa.findUserEntities();
     }
 
    

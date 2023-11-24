@@ -4,6 +4,7 @@
  */
 package logica;
 
+import java.util.List;
 import persistence.ControladoraPersistence;
 
 /**
@@ -20,5 +21,9 @@ public class ControladoraLogica {
         user.setRol(rol);
         controlPer.createUser(user);
     }
+
+    public List<User> getAllUsers() {
+            return controlPer.getAllUsers();
+        }
     
 }
