@@ -3,6 +3,17 @@
 
 <body id="page-top">
 
+      <!-- validation session -->
+      
+      <%HttpSession mySession= request.getSession();
+     String userSession=(String) request.getSession().getAttribute("user");
+      
+     if(userSession==null){
+          response.sendRedirect("noLogin.jsp");
+          }
+
+      %>
+    
     <!-- Page Wrapper -->
     <div id="wrapper">
 
@@ -10,7 +21,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-tooth"></i>
                     
@@ -25,11 +36,11 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="index.jsp">
                     
                     <i class="fas fa-solid fa-bars"></i>
                    
-                    <span>Dashboard</span></a>
+                    <span>Menu</span></a>
             </li>
 
             <!-- Divider -->
@@ -123,9 +134,10 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><%=request.getSession().getAttribute("user")%></span>
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg">
+                                <a href="login.jsp">cerrar session</a>
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
