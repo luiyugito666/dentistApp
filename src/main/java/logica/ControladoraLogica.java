@@ -25,5 +25,17 @@ public class ControladoraLogica {
     public List<User> getAllUsers() {
             return controlPer.getAllUsers();
         }
+
+    public void deleteUser(int idUser) {
+    controlPer.deleteUser(idUser);
+    }
+
+    public User getUserById(int idUser) {
+        return controlPer.getUserById(idUser);
+    }
+
+    public void editUser(User usu) {
+        controlPer.editUser(usu);
+    }
     
 }

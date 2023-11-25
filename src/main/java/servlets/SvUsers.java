@@ -39,7 +39,6 @@ public class SvUsers extends HttpServlet {
          listUsers=control.getAllUsers();
          HttpSession mySesion= request.getSession();
          mySesion.setAttribute("listUser", listUsers);
-         System.out.println("la lista de usuario es ****"+listUsers.get(0));
          response.sendRedirect("viewUsers.jsp");
          
         

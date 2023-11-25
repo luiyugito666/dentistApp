@@ -53,27 +53,25 @@
                                             <td style="display:flex; width:230px;">
                                                 
                                                 <form name="delete" action="SvDelUser" method="POST">
+                                                     <input type="hidden" name="id" value="<%=use.getIdUser() %>">     </input>   
                                                     <button type="submit" class="btn btn-primary btn-user btn-block" 
                                                             style="background: red;margin-right:5px;">
                                                         <i class="fas fa-trash-alt"></i> Eliminar
                                                      </button>  
                                                     
-                                                    <input type="hidden" name="id" value="<%=use.getIdUser() %>">
+                                                  
+                                                </form>
+                                                        <form name="edit" action="SvEditUser" method="GET">
+                                                     <input type="hidden" name="id" value="<%=use.getIdUser() %>">
                                                     
                                                         
-                                                    </input>   
-                                                    
-                                                </form>
-                                                        <form name="delete" action="SvEditUser" method="POST">
+                                                    </input>          
                                                     <button type="submit" class="btn btn-primary btn-user btn-block" 
                                                             style="margin-left:5px;">
                                                         <i class="fas fa-pencil-alt"></i> Ediar
                                                      </button>  
                                                     
-                                                    <input type="hidden" name="id" value="<%=use.getIdUser() %>">
                                                     
-                                                        
-                                                    </input>   
                                                     
                                                 </form>
                                             

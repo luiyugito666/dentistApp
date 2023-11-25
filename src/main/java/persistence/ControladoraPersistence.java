@@ -5,7 +5,10 @@
 package persistence;
 
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import logica.User;
+import persistence.exceptions.NonexistentEntityException;
 
 /**
  *
@@ -28,6 +31,29 @@ public class ControladoraPersistence {
     public List<User> getAllUsers() {
         return userJpa.findUserEntities();
     }
+
+    public void deleteUser(int idUser) {
+        try {
+            userJpa.destroy(idUser);
+        } catch (NonexistentEntityException ex) {
+            Logger.getLogger(ControladoraPersistence.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public User getUserById(int idUser) {
+        return userJpa.findUser(idUser);
+    }
+
+    public void editUser(User usu) {
+
+        try {
+            userJpa.edit(usu);
+        } catch (Exception ex) {
+            Logger.getLogger(ControladoraPersistence.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+   
 
    
             
