@@ -39,12 +39,11 @@
                                            
                                         </tr>
                                     </tfoot>
+                                                    
                                     <% List<User> listUser=
                                             (List) request.getSession().getAttribute("listUser"); %>
-                                    
+                                            
                                     <tbody>
-                                        
-                                        
                                         <%for(User use:listUser){ %>
                                         <tr>
                                             <td id="id_usu<%=use.getIdUser() %>"><%=use.getIdUser() %></td>
@@ -59,25 +58,17 @@
                                                         <i class="fas fa-trash-alt"></i> Eliminar
                                                      </button>  
                                                     
-                                                  
                                                 </form>
                                                         <form name="edit" action="SvEditUser" method="GET">
                                                      <input type="hidden" name="id" value="<%=use.getIdUser() %>">
                                                     
-                                                        
                                                     </input>          
                                                     <button type="submit" class="btn btn-primary btn-user btn-block" 
                                                             style="margin-left:5px;">
                                                         <i class="fas fa-pencil-alt"></i> Ediar
                                                      </button>  
                                                     
-                                                    
-                                                    
                                                 </form>
-                                            
-                                            
-                                            
-                                            
                                             
                                             </td>
                                           
@@ -94,10 +85,6 @@
 
                 </div>
                 <!-- /.container-fluid -->
-
-     
-
-
 
 <%@include file="components/footbody.jsp"%>
 

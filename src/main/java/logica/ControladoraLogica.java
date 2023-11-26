@@ -37,5 +37,30 @@ public class ControladoraLogica {
     public void editUser(User usu) {
         controlPer.editUser(usu);
     }
+
+    public boolean verifyUser(String user, String password) {
+        boolean verify=this.getUser(user,password);
+        
+        return verify;
+    }
+
+    private boolean getUser(String user, String password) {
+        
+       List<User> listUser=getAllUsers();
+       
+       for(User use:listUser){
+           if(use.getUserName().equalsIgnoreCase(user)){
+               if(use.getPassword().equals(password)){
+                   return true;
+               }
+               return false;
+           
+           }
+       
+       }
+       return false;
+        
+
+    }
     
 }
